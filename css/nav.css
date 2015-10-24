@@ -1,0 +1,415 @@
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #797e83;
+  font-size: 16px;
+  margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: #656a6e;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+
+ /*--------------------------
+  Main Styles
+--------------------------- */
+html,
+body,
+.container {
+  /*height:100%;*/
+}
+
+
+.main-header,
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/*selects hamburger icon and envelope icon .. just showing my skillz..*/
+i[class*="fa-bars"],
+i[class*="envelope"] {
+  display: none;
+}
+
+
+#hamburger:hover,
+#mail:hover {
+  cursor: pointer;
+}
+
+.main-header {
+  padding-top: 2em;
+  align-items: center;
+}
+
+.site-logo {
+  /*width: 80px;*/
+}
+
+#logo {
+  width: 80px;
+}
+
+.nav {
+  margin-top: 0;
+}
+
+.nav a {
+  display: block;
+  color: #797e83;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  padding:  .4em;
+  border-bottom: 1px solid #ebecec
+}
+
+.nav a:hover {
+  color: #0b0b0b;
+  border-bottom-color: #52bab3;
+}
+
+
+
+
+
+/* --------------------------
+  Media Queries
+--------------------------- */
+
+@media (min-width: 769px) {
+  /*.container {
+    width: 90%;
+    margin: 0 auto;
+  }*/
+
+
+
+  .main-header{
+    width: 100%;
+    position: fixed;
+    /*justify-content: center;*/
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*margin: 0 auto;*/
+    /*place main header at bottom of its div...*/
+    /*justify-content: flex-end;*/
+    background-color: white;
+    z-index: 100;
+
+  }
+  .site-logo {
+    width: 140px;
+  }
+
+  i[class*="fa-bars"] {
+    display: inline-block;  /*need this bc hidden in mobile view*/
+    position: absolute;
+    left: 10%;
+    top: 50px;
+  }
+
+  i[class*="envelope"] {
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+    top: 50px;
+  }
+
+  .nav {
+    /*margin-top: 3em;*/
+    flex-direction: row;
+    justify-content: center;
+    /*border-bottom: 1px solid;*/
+
+  }
+  .nav a {
+    border-bottom-color: transparent;
+  }
+
+/*this line will be added to top of a element.*/
+  .line {
+    width: 100%;
+    border-top: 1px solid;
+    border-top-color: black;
+
+  }
+
+
+/*
+  -----------------
+   Form
+  -----------------*/
+
+  form {
+    /*position: absolute;*/
+
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    margin-top: 12%;
+    background-color: red;
+    color: white;
+    /*text-align: center;*/
+    /*width: 100%;*/
+    /*box-sizing: border-box;  already in there base.css*/
+  }
+
+  #contact {
+    /*-webkit-flex-grow: 1;*/
+
+    /*display: -webkit-flex;*/
+    /*flex-direction: column;*/
+    /*margin-top: 5%;*/
+    /*margin-top: 25px;*/
+    /*margin-left: 50px;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    padding: 50px;
+    /*margin: 0 auto;*/
+    /*margin-right: 10%;*/
+    /*align-items: flex-start;*/
+    /*justify-content: flex-start;*/
+    text-align: left;
+    border: 1px solid black;
+      -webkit-flex-flow: row wrap;
+  }
+
+  .input-col {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*margin: 0 auto;*/
+    padding: 50px;
+    -webkit-flex-grow: 1;
+    /*margin-left: 100px;*/
+    /*right: 10%;*/
+    /*margin-top: 25px;*/
+    /*padding-top: 25px;*/
+    /*margin-right: 50px;*/
+    border: 1px solid black;
+    /*display: -webkit-flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-end;*/
+    /*justify-contents: center;*/
+
+  }
+
+  .input-col div{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  input,
+  textarea {
+    margin: 10px 20px;
+  }
+
+  input {
+    width: 400px;
+  }
+
+  textarea {
+    width: 400px;
+    height: 100px;
+  }
+
+  button {
+    margin-left: 20px;
+    /*margin: 0px 0px 0px 0px;*/
+    width: 100px;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    /*margin-top: 100px;*/
+    /*padding-top: 100px;*/
+    /*height: 100%;*/
+  }
+
+  .col-container {
+    padding: 100px 0;
+    display: -webkit-flex;
+    /*-webkit-justify-content: space-between;*/
+    -webkit-justify-content: space-around;
+  }
+  .col {
+    -webkit-flex: 1;
+  }
+  .primary-col {
+    -webkit-flex: 2;
+
+  }
+
+  /*
+  second-container relative / abs positioning
+
+  .second-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .breds-col{
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    margin-right: 5px;
+  }
+
+
+  .shoemain {
+    left: 35%;
+    background: red;
+    border: 1px solid;
+  }
+  .shoe-col-3 {
+    right: 0;
+  }
+
+  end of second position rel/abs pos
+  */
+
+  /*start of flexbox second container*/
+  .second-container {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    /*align-content: center;*/
+    /*flex-wrap: wrap;*/
+    box-sizing: border-box;
+
+  }
+
+  .shoe {
+    width: 80%;
+    border-radius: 50%;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 10px;*/
+    /*margin-right: 25px;*/
+  }
+
+  .breds-col {
+     -webkit-flex: 1;
+     text-align: center;
+     margin: 10px;
+  }
+
+
+
+
+  /*end of flexbox second container*/
+
+
+
+
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-align-content: center;
+    /*align-content: center;*/
+    /*align-items: flex-start;*/
+    /*text-align: center;*/
+    background: black;
+    color: white;
+    height: 300px;
+  }
+
+  footer p{
+    font-weight: bold;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    width: 100%;
+    color: skyblue;
+    text-align: center;
+    /*align-self: flex-start;*/
+    /*padding-left: 500px;*/
+  }
+
+  footer a:nth-of-type(2) {
+    font-size: 80px;
+    /*align-self: flex-start;*/
+  }
+
+  .shoe-header-breds {
+    /*z-index: -1;*/
+    background: url("../img/breds.jpg") no-repeat center fixed;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    padding-top: 80%;
+    text-align: center;
+  }
+  .shoe-header-concords {
+    background: url("../img/concords.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 80%;
+    /*color: white;*/
+    text-align: center;
+    font-size: 50px;
+  }
+  .shoe-header-gamas {
+    background: url("../img/gamas.jpg") no-repeat center fixed;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+    padding-top: 70%;
+    text-align: center;
+  }
+
+}
+
+/*@media (min-width: 1025px) {
+
+
+  main-header {
+    flex-direction: row;
+  }
+  .site-logo {
+    margin-right: auto;
+  }
+  .nav {
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .nav li {
+    margin-left: .65em;
+    margin-right: .65em;
+  }
+}
